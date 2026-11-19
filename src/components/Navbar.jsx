@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router"
 const Navbar = () => {
   return (
     <div>
@@ -21,7 +21,7 @@ const Navbar = () => {
           </button>
           <dialog
             className="drawer drawer-end"
-            tabindex="-1"
+            tabIndex="-1"
             id="navbarDrawer"
             aria-labelledby="navbarDrawerLabel"
           >
@@ -39,59 +39,18 @@ const Navbar = () => {
             <div className="drawer-body mb-2 md:mb-0">
               <ul className="nav navbar-nav me-auto">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Link
-                  </a>
+                  <Link className="nav-link" to="/login">
+                    Login
+                  </Link>
                 </li>
-                <li className="nav-item">
-                  <button
-                    className="nav-link"
-                    type="button"
-                    data-bs-toggle="menu"
-                    aria-expanded="false"
-                  >
-                    Menu
-                  </button>
-                  <div className="menu">
-                    <a className="menu-item" href="#">
-                      Action
-                    </a>
-                    <a className="menu-item" href="#">
-                      Another action
-                    </a>
-                    <hr className="menu-divider" />
-                    <a className="menu-item" href="#">
-                      Something else here
-                    </a>
-                  </div>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" aria-disabled="true">
-                    Disabled
-                  </a>
-                </li>
+               
+               
               </ul>
-              <form className="hstack gap-2" role="search">
-                <input
-                  className="form-control"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  className="btn-solid btn-icon theme-secondary"
-                  type="submit"
-                >
-                  <svg className="bi" width="16" height="16">
-                    <use href="#search" />
-                  </svg>
-                </button>
-              </form>
             </div>
           </dialog>
         </div>

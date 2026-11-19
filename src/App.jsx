@@ -5,6 +5,8 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router'
+import Login from './components/Login'
 
 function App() {
   
@@ -12,7 +14,10 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Home/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+    </Routes>
     </>
   )
 }
